@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: llm-ops-config
+  namespace: llm-ops
+data:
+  ENV: "staging"
+  LOG_LEVEL: "INFO"
+  GENERATION_BACKEND: "template"
+  RERANKER_BACKEND: "tfidf"
+  CHROMA_PERSIST_DIR: "/app/chroma_data"
+  CHROMA_COLLECTION_NAME: "llm_ops_docs"
+  EMBEDDING_MODEL: "all-MiniLM-L6-v2"
+  EMBEDDING_DEVICE: "cpu"
+  GROUNDING_THRESHOLD: "0.3"
+  SAMPLE_DATA_DIR: "/app/data/sample_docs"

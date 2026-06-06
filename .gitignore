@@ -1,0 +1,61 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+.streamlit/secrets.toml
+
+*.db
+*.sqlite3
+chroma_data/
+data/embeddings/
+data/jobs/*.json
+data/baselines/*.json
+data/model_registry.json
+
+*.pt
+*.bin
+*.onnx
+*.safetensors
+
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Egg-info
+llm_ops.egg-info/
+
+# Private notes — local only
+.private-notes/
+*.private.md
+.claude/
+
+# Beginner learning walkthrough — kept local, not published
+LEARNING_GUIDE.md
+
+# AI-assistant artifacts / internal planning — never publish
+CLAUDE.md
+docs/08_build_plan.md

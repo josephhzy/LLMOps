@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: llm-ops-ingress
+  namespace: llm-ops
+  annotations:
+    nginx.ingress.kubernetes.io/rate-limit-connections: "100"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+# NOTE: TLS is intentionally omitted in this demo manifest.
+# Before production use, either configure cert-manager (add annotation
+# cert-manager.io/cluster-issuer: <issuer-name> and the tls block below)
+# or supply a manually created secret.
+#
+# tls:
+#   - hosts:
+#       - llm-ops.internal
+#     secretName: llm-ops-tls   # cert-manager or manual secret required
+spec:
+  rules:
+    - host: llm-ops.internal
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: llm-ops-api
+                port:
+                  number: 80

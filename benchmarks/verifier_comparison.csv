@@ -1,0 +1,19 @@
+id,question,role,num_chunks,tfidf_supported_ratio,tfidf_gate_pass,nli_supported_ratio,nli_entailment_frac,nli_neutral_frac,nli_contradiction_frac,nli_gate_pass,agree
+1,What are the first steps in incident response?,viewer,4,0.0,False,0.5,0.5,0.5,0.0,True,False
+2,What is the notification timeline for a P1 incident?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+3,How should digital evidence be acquired?,admin,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+4,What are the requirements for system access requests?,viewer,4,0.0,False,0.0,0.0,1.0,0.0,False,True
+5,How often should access rights be reviewed?,viewer,4,0.0,False,0.0,0.0,1.0,0.0,False,True
+6,What are the data classification tiers?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+7,What handling requirements apply to restricted data?,viewer,4,0.0,False,0.0,0.0,1.0,0.0,False,True
+8,What is the change management approval process?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+9,What is the procedure for emergency changes?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+10,What activities are prohibited under the acceptable use policy?,viewer,5,0.0,False,0.5,0.5,0.5,0.0,True,False
+11,What is the limit on personal use of company systems?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+12,What training is required for new analysts during onboarding?,viewer,5,0.5,True,0.0,0.0,1.0,0.0,False,False
+13,How long is the probation period for new hires?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+14,What hashing algorithm should be used for evidence integrity?,admin,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+15,Is MFA required for system access?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+16,What happens after a post-incident review is completed?,viewer,2,0.5,True,0.0,0.0,1.0,0.0,False,False
+17,How should confidential documents be labeled?,viewer,5,0.0,False,0.0,0.0,1.0,0.0,False,True
+18,What must a change request include before CAB review?,viewer,5,0.5,True,0.5,0.5,0.5,0.0,True,True

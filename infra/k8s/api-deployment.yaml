@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm-ops-api
+  namespace: llm-ops
+  labels:
+    app: llm-ops-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: llm-ops-api
+  template:
+    metadata:
+      labels:
+        app: llm-ops-api
+    spec:
+      serviceAccountName: llm-ops-api-sa
+      containers:
+        - name: api
+          image: llm-ops-api:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: llm-ops-config
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          volumeMounts:
+            - name: chroma-data
+              mountPath: /app/chroma_data
+      volumes:
+        - name: chroma-data
+          persistentVolumeClaim:
+            claimName: llm-ops-chroma-pvc

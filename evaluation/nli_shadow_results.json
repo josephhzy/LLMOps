@@ -1,0 +1,894 @@
+{
+  "summary": {
+    "n_questions": 18,
+    "n_evaluated": 18,
+    "model": "cross-encoder/nli-deberta-v3-base",
+    "entailment_threshold": 0.7,
+    "disagreements_total": 43,
+    "disagreement_counts": {
+      "tfidf_pass_nli_contradiction": 1,
+      "tfidf_pass_nli_neutral": 42,
+      "tfidf_reject_nli_entailment": 0
+    }
+  },
+  "entries": [
+    {
+      "idx": 0,
+      "question": "What are the first steps in incident response?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Scope] # SOP-001: Cybersecurity Incident Response\n\n## 1. [1] Post-Incident Review\n\nA Post-Incident Review (PIR) must be convened within 5 business days of incident closure. [3] It ensures consistent response across all divisions and minimises impact to business-critical operations. [1] Severity Classification] sistent response across all divisions and minimises impact to business-critical operations. [4] Post-Incident Review] : Within 48 hours for P1 incidents involving regulated or restricted data, in line with industry-standard breach-notification requirements. [3]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 5
+      },
+      "nli": {
+        "supported_ratio": 0.2,
+        "num_claims": 5,
+        "label_distribution": {
+          "entailment": 1,
+          "neutral": 4,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 1,
+      "question": "What is the notification timeline for a P1 incident?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Notification Timelines [3] Post-Incident Review\n\nA Post-Incident Review (PIR) must be convened within 5 business days of incident closure. [1] External notification to the contracted MSSP / SOC Provider is mandatory for P1 and recommended for P2. [3] Post-Incident Review] : Within 48 hours for P1 incidents involving regulated or restricted data, in line with industry-standard breach-notification requirements. [1] Post-Incident Review] ntracted MSSP / SOC Provider is mandatory for P1 and recommended for P2. [2]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.75,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 3,
+          "neutral": 1,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 2,
+      "question": "How should digital evidence be acquired?",
+      "role": "admin",
+      "answer": "Based on the available evidence: Scope] # SOP-002: Digital Evidence Handling and Chain of Custody\n\n## 1. [1] Scope\n\nApplicable to all Forensic Specialists, Digital Forensic Examiners, and any authorised personnel who interact with digital evidence in support of internal investigations, incident response activities, or regulatory examinations. [3] Storage Requirements\n\nDigital evidence must be stored in the Secured Evidence Vault (SEV), which maintains access-controlled, climate-regulated, and CCTV-monitored conditions. [2] Chain of Custody Requirements\n\nA chain of custody record must be initiated the moment digital evidence is identified. [3] Purpose\n\nThis procedure defines the requirements for acquiring, authenticating, storing, and transferring digital evidence to ensure admissibility in legal proceedings and compliance with applicable rules of evidence and industry-standard forensic practice (e.g., ISO/IEC 27037). [1]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 5
+      },
+      "nli": {
+        "supported_ratio": 0.2,
+        "num_claims": 5,
+        "label_distribution": {
+          "entailment": 1,
+          "neutral": 4,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 3,
+      "question": "What are the requirements for system access requests?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Role-Based Access Control (RBAC)] ed on predefined roles rather than individual requests. [2] Access Request and Approval Workflow] documented in the Access Control Register before implementation. [1] Access Request and Approval Workflow [1] Access Request and Approval Workflow\n\n1. [3] Privileged access must be requested through the Privileged Access Management (PAM) system on a just-in-time basis, with a maximum session duration of 4 hours. [1]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.25,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 1,
+          "neutral": 3,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 4,
+      "question": "How often should access rights be reviewed?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Quarterly Access Reviews\n\nAll system access is reviewed every quarter. [4] Quarterly Access Reviews] tion and must verify access within 3 business days. [1] Quarterly Access Reviews [1] Access Request and Approval Workflow] documented in the Access Control Register before implementation. [3] Access Request and Approval Workflow\n\n1. [2]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 0.75,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.25,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 1,
+          "neutral": 3,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 5,
+      "question": "What are the data classification tiers?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Classification Tiers\n\n### 3.1 Public [1] Classification Tiers\n\n### 3.1 Public\n\nInformation approved for unrestricted distribution. [2] Scope] # SOP-004: Data Classification and Handling\n\n## 1. [3] [3.2 Internal] dling all data according to its assigned classification. [2] Declassification] e Data Owner must respond to classification requests within 5 business days. [4]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.0,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 0,
+          "neutral": 4,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 6,
+      "question": "What handling requirements apply to restricted data?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Handling Requirements by Tier [1] Handling Requirements by Tier] e records. [1] [3.2 Internal] dling all data according to its assigned classification. [3] ### 3.4 Restricted\n\nThe highest sensitivity tier. [1] Access requires explicit authorisation from the Data Owner and ISO clearance. [1]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.5,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 2,
+          "neutral": 2,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 7,
+      "question": "What is the change management approval process?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Change Request Process [4] Scope] # SOP-005: Change Management\n\n## 1. [1] [3.2 Change Advisory Board (CAB) Review] tor submits a Change Request (CR) via the IT Service Management (ITSM) portal. [2] Post-Implementation Review]  3 emergency changes in a calendar month triggers a process review by the Service Management Office. [3] Emergency Change Procedures] \n## 5. [5]",
+      "policy_action": "ALLOW_WITH_WARNING",
+      "tfidf": {
+        "supported_ratio": 0.5,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.0,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 0,
+          "neutral": 4,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 8,
+      "question": "What is the procedure for emergency changes?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Purpose\n\nThis procedure governs the process for requesting, evaluating, approving, implementing, and reviewing changes to production systems and infrastructure. [4] Emergency Change Procedures\n\nEmergency changes are permitted only when an unplanned outage or critical vulnerability requires immediate remediation. [1] Emergency Change Procedures] \n## 5. [5] The CAB reviews all emergency changes at the next scheduled meeting. [2] More than 3 emergency changes in a calendar month triggers a process review by the Service Management Office. [2]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 5
+      },
+      "nli": {
+        "supported_ratio": 0.4,
+        "num_claims": 5,
+        "label_distribution": {
+          "entailment": 2,
+          "neutral": 3,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 9,
+      "question": "What activities are prohibited under the acceptable use policy?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Scope] # POLICY-001: Acceptable Use of Information Technology Resources\n\n## 1. [1] Purpose\n\nThis policy defines the acceptable and prohibited uses of all organisation information technology resources. [1] Prohibited Activities] able Use\n\nIT resources are provided primarily for official business purposes. [2] Monitoring Notice] rohibited Activities\n\nThe following activities are strictly prohibited on organisation IT resources:\n\n- Accessing, downloading, or distributing offensive, obscene, or illegal material\n- Attempting to bypass security controls, firewalls, or access restrictions\n- Installing unauthorised software, browser extensions, or hardware peripherals\n- Using organisation systems to conduct personal business activities or private commercial ventures\n- Sharing classified or restricted information through unapproved channels (e.g., personal email, consumer messaging apps, unauthorised cloud storage)\n- Connecting personal devices to the internal network without Mobile Device Management (MDM) enrolment\n- Running network scanning, penetration testing, or exploitation tools outside of authorised security assessments\n- Cryptocurrency mining or any resource-intensive non-work computation [3] Acceptable Use] and applicable data-protection regulations (e.g., GDPR and other industry-standard privacy frameworks). [4]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.75,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 3,
+          "neutral": 0,
+          "contradiction": 1
+        }
+      }
+    },
+    {
+      "idx": 10,
+      "question": "What is the limit on personal use of company systems?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Users must not use their corporate email address to register for personal online services or subscriptions. [3] Limited Personal Use\n\nIncidental personal use of IT resources is permitted provided it:\n\n- Does not interfere with work duties or productivity\n- Does not consume excessive bandwidth or storage\n- Does not involve any prohibited activity listed in Section 4\n- Is limited to break times where practicable\n- Does not create any legal liability for the organisation [1] Limited Personal Use] ained for a minimum of 12 months and access is restricted to the ISO and authorised audit personnel. [1] IT resources include, but are not limited to: workstations, laptops, mobile devices, email systems, internet access, cloud services, internal applications, printers, and network infrastructure. [4] Violations and Enforcement]  limited to break times where practicable\n- Does not create any legal liability for the organisation\n\nPersonal use of corporate email for non-work correspondence should be minimal. [3]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.5,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 2,
+          "neutral": 2,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 11,
+      "question": "What training is required for new analysts during onboarding?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Purpose\n\nThis guide provides a standardised onboarding process for new analysts joining the Technology Divisions. [1] Required Training (Weeks 2-4)\n\nAll training must be completed within 30 calendar days of start date. [2] Required Training (Weeks 2-4)]  and databases | New Analyst |\n| Day 5 | End-of-week check-in with Hiring Manager | Hiring Manager |\n\n## 5. [2] Scope] # GUIDE-001: New Analyst Onboarding Checklist and Procedures\n\n## 1. [1] Scope\n\nThis guide applies to all new analysts (including lateral transfers and inter-department moves) assigned to the Forensic Science, Cybersecurity, or Data Analytics divisions. [3]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 5
+      },
+      "nli": {
+        "supported_ratio": 0.0,
+        "num_claims": 5,
+        "label_distribution": {
+          "entailment": 0,
+          "neutral": 5,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 12,
+      "question": "How long is the probation period for new hires?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Probation Review\n\nAll new analysts undergo a 6-month probation period. [1] Probation Review] bation Review\n\nAll new analysts undergo a 6-month probation period. [2] Probation Review] tisfactory, probation may be extended by up to 3 months (once only) or employment may be terminated. [3] Required Training (Weeks 2-4)]  and databases | New Analyst |\n| Day 5 | End-of-week check-in with Hiring Manager | Hiring Manager |\n\n## 5. [4] If performance is unsatisfactory, probation may be extended by up to 3 months (once only) or employment may be terminated. [2]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 5
+      },
+      "nli": {
+        "supported_ratio": 0.6,
+        "num_claims": 5,
+        "label_distribution": {
+          "entailment": 3,
+          "neutral": 2,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 13,
+      "question": "What hashing algorithm should be used for evidence integrity?",
+      "role": "admin",
+      "answer": "Based on the available evidence: Hashing Requirements\n\nEvery forensic image must be verified with dual hashing: [2] Hashing Requirements\n\nEvery forensic image must be verified with dual hashing:\n\n- **SHA-256** (primary integrity check)\n- **MD5** (secondary, for backward compatibility with legacy systems)\n\nHash values must be generated at the time of acquisition and re-verified before analysis, before transfer, and upon receipt by any new custodian. [1] Handling Logs] o the Lead Examiner and documented as an integrity exception in the EMS. [3] Hashing Requirements] tile data capture toolkit maintained by the Digital Forensics Lab. [2] Any hash mismatch must be reported immediately to the Lead Examiner and documented as an integrity exception in the EMS. [1]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 0.75,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.25,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 1,
+          "neutral": 3,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 14,
+      "question": "Is MFA required for system access?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Quarterly Access Reviews\n\nAll system access is reviewed every quarter. [3] Multi-Factor Authentication (MFA)] r Authentication (MFA)\n\nMFA is mandatory for all organisation systems. [2] Multi-Factor Authentication (MFA)\n\nMFA is mandatory for all organisation systems. [1] The approved MFA methods are: [1] Division Heads must certify that each individual's access remains appropriate for their current role. [3]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 0.75,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.5,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 3,
+          "neutral": 1,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 15,
+      "question": "What happens after a post-incident review is completed?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Post-Incident Review\n\nA Post-Incident Review (PIR) must be convened within 5 business days of incident closure. [1] Post-Implementation Review [2] Post-Incident Review] : Within 48 hours for P1 incidents involving regulated or restricted data, in line with industry-standard breach-notification requirements. [1] Post-Incident Review] ntracted MSSP / SOC Provider is mandatory for P1 and recommended for P2. [3] Post-Implementation Review\n\nAll High and Critical changes require a Post-Implementation Review (PIR) within 5 business days of deployment. [4]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.25,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 3,
+          "neutral": 1,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 16,
+      "question": "How should confidential documents be labeled?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: Labelling Standards\n\nAll documents must carry a classification label in the header or footer of every page. [1] Emails containing Confidential or Restricted information must include the classification in the subject line prefix, such as `[CONFIDENTIAL]`. [1] Declassification] ed information must include the classification in the subject line prefix, such as `[CONFIDENTIAL]`. [2] [3.3 Confidential] ontrols are required, but release must be approved by the Communications Division. [3] ### 3.3 Confidential\n\nInformation whose unauthorised disclosure could cause significant harm to operations, investigations, or individuals. [4]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 5
+      },
+      "nli": {
+        "supported_ratio": 0.2,
+        "num_claims": 5,
+        "label_distribution": {
+          "entailment": 1,
+          "neutral": 4,
+          "contradiction": 0
+        }
+      }
+    },
+    {
+      "idx": 17,
+      "question": "What must a change request include before CAB review?",
+      "role": "viewer",
+      "answer": "Based on the available evidence: [3.2 Change Advisory Board (CAB) Review] tor submits a Change Request (CR) via the IT Service Management (ITSM) portal. [2] [3.2 Change Advisory Board (CAB) Review] d implementation window** (must fall within an approved maintenance window for Medium+ risk changes)\n\n### 3.2 Change Advisory Board (CAB) Review\n\nThe CAB convenes weekly on Tuesdays at 14:00 UTC to review pending CRs. [1] Rollback drills for Critical changes must be conducted in the staging environment prior to CAB review. [3] Each CR must include:\n\n- **Description** of the proposed change and its business justification\n- **Impact assessment** identifying affected systems, users, and dependencies\n- **Risk rating** (Low, Medium, High, Critical) based on the Change Risk Matrix\n- **Implementation plan** with step-by-step instructions and assigned personnel\n- **Rollback plan** detailing how to revert if the change fails\n- **Testing evidence** confirming the change was validated in a non-production environment\n- **Proposed implementation window** (must fall within an approved maintenance window for Medium+ risk changes) [2] Testing Requirements] llback drills for Critical changes must be conducted in the staging environment prior to CAB review. [4]",
+      "policy_action": "ALLOW",
+      "tfidf": {
+        "supported_ratio": 1.0,
+        "num_claims": 4
+      },
+      "nli": {
+        "supported_ratio": 0.75,
+        "num_claims": 4,
+        "label_distribution": {
+          "entailment": 3,
+          "neutral": 1,
+          "contradiction": 0
+        }
+      }
+    }
+  ],
+  "disagreements": [
+    {
+      "qa_idx": 0,
+      "question": "What are the first steps in incident response?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Scope] # SOP-001: Cybersecurity Incident Response\n\n## 1.",
+      "tfidf_max_similarity": 0.3914,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0008,
+      "nli_contradiction_score": 0.0016,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 0,
+      "question": "What are the first steps in incident response?",
+      "sentence_idx": 1,
+      "sentence": "Post-Incident Review\n\nA Post-Incident Review (PIR) must be convened within 5 business days of incident closure.",
+      "tfidf_max_similarity": 0.6721,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0016,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 0,
+      "question": "What are the first steps in incident response?",
+      "sentence_idx": 3,
+      "sentence": "Severity Classification] sistent response across all divisions and minimises impact to business-critical operations.",
+      "tfidf_max_similarity": 0.5302,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0024,
+      "nli_contradiction_score": 0.0002,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 0,
+      "question": "What are the first steps in incident response?",
+      "sentence_idx": 4,
+      "sentence": "Post-Incident Review] : Within 48 hours for P1 incidents involving regulated or restricted data, in line with industry-standard breach-notification requirements.",
+      "tfidf_max_similarity": 0.5377,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0004,
+      "nli_contradiction_score": 0.0022,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 1,
+      "question": "What is the notification timeline for a P1 incident?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Notification Timelines  Post-Incident Review\n\nA Post-Incident Review (PIR) must be convened within 5 business days of incident closure.",
+      "tfidf_max_similarity": 0.5483,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0007,
+      "nli_contradiction_score": 0.0032,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 2,
+      "question": "How should digital evidence be acquired?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Scope] # SOP-002: Digital Evidence Handling and Chain of Custody\n\n## 1.",
+      "tfidf_max_similarity": 0.4552,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0045,
+      "nli_contradiction_score": 0.0005,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 2,
+      "question": "How should digital evidence be acquired?",
+      "sentence_idx": 1,
+      "sentence": "Scope\n\nApplicable to all Forensic Specialists, Digital Forensic Examiners, and any authorised personnel who interact with digital evidence in support of internal investigations, incident response activities, or regulatory examinations.",
+      "tfidf_max_similarity": 0.6919,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0936,
+      "nli_contradiction_score": 0.001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 2,
+      "question": "How should digital evidence be acquired?",
+      "sentence_idx": 2,
+      "sentence": "Storage Requirements\n\nDigital evidence must be stored in the Secured Evidence Vault (SEV), which maintains access-controlled, climate-regulated, and CCTV-monitored conditions.",
+      "tfidf_max_similarity": 0.4826,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0014,
+      "nli_contradiction_score": 0.0008,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 2,
+      "question": "How should digital evidence be acquired?",
+      "sentence_idx": 4,
+      "sentence": "Purpose\n\nThis procedure defines the requirements for acquiring, authenticating, storing, and transferring digital evidence to ensure admissibility in legal proceedings and compliance with applicable rules of evidence and industry-standard forensic practice (e.g., ISO/IEC 27037).",
+      "tfidf_max_similarity": 0.7702,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0007,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 3,
+      "question": "What are the requirements for system access requests?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Role-Based Access Control (RBAC)] ed on predefined roles rather than individual requests.",
+      "tfidf_max_similarity": 0.3385,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0271,
+      "nli_contradiction_score": 0.0,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 3,
+      "question": "What are the requirements for system access requests?",
+      "sentence_idx": 1,
+      "sentence": "Access Request and Approval Workflow] documented in the Access Control Register before implementation.",
+      "tfidf_max_similarity": 0.5159,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0533,
+      "nli_contradiction_score": 0.0009,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 3,
+      "question": "What are the requirements for system access requests?",
+      "sentence_idx": 2,
+      "sentence": "Access Request and Approval Workflow  Access Request and Approval Workflow\n\n1.",
+      "tfidf_max_similarity": 0.46,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0176,
+      "nli_contradiction_score": 0.0035,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 4,
+      "question": "How often should access rights be reviewed?",
+      "sentence_idx": 2,
+      "sentence": "Quarterly Access Reviews  Access Request and Approval Workflow] documented in the Access Control Register before implementation.",
+      "tfidf_max_similarity": 0.4979,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0016,
+      "nli_contradiction_score": 0.0003,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 4,
+      "question": "How often should access rights be reviewed?",
+      "sentence_idx": 3,
+      "sentence": "Access Request and Approval Workflow\n\n1.",
+      "tfidf_max_similarity": 0.4424,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0019,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 5,
+      "question": "What are the data classification tiers?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Classification Tiers\n\n### 3.1 Public  Classification Tiers\n\n### 3.1 Public\n\nInformation approved for unrestricted distribution.",
+      "tfidf_max_similarity": 0.4257,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0049,
+      "nli_contradiction_score": 0.0002,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 5,
+      "question": "What are the data classification tiers?",
+      "sentence_idx": 1,
+      "sentence": "Scope] # SOP-004: Data Classification and Handling\n\n## 1.",
+      "tfidf_max_similarity": 0.4879,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0014,
+      "nli_contradiction_score": 0.0003,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 5,
+      "question": "What are the data classification tiers?",
+      "sentence_idx": 2,
+      "sentence": "[3.2 Internal] dling all data according to its assigned classification.",
+      "tfidf_max_similarity": 0.4272,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0019,
+      "nli_contradiction_score": 0.0005,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 5,
+      "question": "What are the data classification tiers?",
+      "sentence_idx": 3,
+      "sentence": "Declassification] e Data Owner must respond to classification requests within 5 business days.",
+      "tfidf_max_similarity": 0.6971,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0003,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 6,
+      "question": "What handling requirements apply to restricted data?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Handling Requirements by Tier  Handling Requirements by Tier] e records.",
+      "tfidf_max_similarity": 0.3907,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0826,
+      "nli_contradiction_score": 0.0224,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 6,
+      "question": "What handling requirements apply to restricted data?",
+      "sentence_idx": 1,
+      "sentence": "[3.2 Internal] dling all data according to its assigned classification.",
+      "tfidf_max_similarity": 0.4603,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.1671,
+      "nli_contradiction_score": 0.3592,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 7,
+      "question": "What is the change management approval process?",
+      "sentence_idx": 1,
+      "sentence": "[3.2 Change Advisory Board (CAB) Review] tor submits a Change Request (CR) via the IT Service Management (ITSM) portal.",
+      "tfidf_max_similarity": 0.4171,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0703,
+      "nli_contradiction_score": 0.0018,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 7,
+      "question": "What is the change management approval process?",
+      "sentence_idx": 2,
+      "sentence": "Post-Implementation Review]  3 emergency changes in a calendar month triggers a process review by the Service Management Office.",
+      "tfidf_max_similarity": 0.793,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.154,
+      "nli_contradiction_score": 0.0013,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 8,
+      "question": "What is the procedure for emergency changes?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Purpose\n\nThis procedure governs the process for requesting, evaluating, approving, implementing, and reviewing changes to production systems and infrastructure.",
+      "tfidf_max_similarity": 0.4825,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0032,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 8,
+      "question": "What is the procedure for emergency changes?",
+      "sentence_idx": 2,
+      "sentence": "Emergency Change Procedures] \n## 5.",
+      "tfidf_max_similarity": 0.4802,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.3207,
+      "nli_contradiction_score": 0.0012,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 8,
+      "question": "What is the procedure for emergency changes?",
+      "sentence_idx": 4,
+      "sentence": "More than 3 emergency changes in a calendar month triggers a process review by the Service Management Office.",
+      "tfidf_max_similarity": 0.5606,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0085,
+      "nli_contradiction_score": 0.001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 9,
+      "question": "What activities are prohibited under the acceptable use policy?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Scope] # POLICY-001: Acceptable Use of Information Technology Resources\n\n## 1.",
+      "tfidf_max_similarity": 0.3569,
+      "tfidf_supported": true,
+      "nli_label": "contradiction",
+      "nli_entailment_score": 0.0151,
+      "nli_contradiction_score": 0.9116,
+      "disagreement_type": "tfidf_pass_nli_contradiction"
+    },
+    {
+      "qa_idx": 10,
+      "question": "What is the limit on personal use of company systems?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Users must not use their corporate email address to register for personal online services or subscriptions.",
+      "tfidf_max_similarity": 0.4031,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0016,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 10,
+      "question": "What is the limit on personal use of company systems?",
+      "sentence_idx": 2,
+      "sentence": "IT resources include, but are not limited to: workstations, laptops, mobile devices, email systems, internet access, cloud services, internal applications, printers, and network infrastructure.",
+      "tfidf_max_similarity": 0.4885,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0028,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 11,
+      "question": "What training is required for new analysts during onboarding?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Purpose\n\nThis guide provides a standardised onboarding process for new analysts joining the Technology Divisions.",
+      "tfidf_max_similarity": 0.4975,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0033,
+      "nli_contradiction_score": 0.0,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 11,
+      "question": "What training is required for new analysts during onboarding?",
+      "sentence_idx": 1,
+      "sentence": "Required Training (Weeks 2-4)\n\nAll training must be completed within 30 calendar days of start date.",
+      "tfidf_max_similarity": 0.6522,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0111,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 11,
+      "question": "What training is required for new analysts during onboarding?",
+      "sentence_idx": 2,
+      "sentence": "Required Training (Weeks 2-4)]  and databases | New Analyst |\n| Day 5 | End-of-week check-in with Hiring Manager | Hiring Manager |\n\n## 5.",
+      "tfidf_max_similarity": 0.7092,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0005,
+      "nli_contradiction_score": 0.0003,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 11,
+      "question": "What training is required for new analysts during onboarding?",
+      "sentence_idx": 3,
+      "sentence": "Scope] # GUIDE-001: New Analyst Onboarding Checklist and Procedures\n\n## 1.",
+      "tfidf_max_similarity": 0.5693,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0006,
+      "nli_contradiction_score": 0.0006,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 11,
+      "question": "What training is required for new analysts during onboarding?",
+      "sentence_idx": 4,
+      "sentence": "Scope\n\nThis guide applies to all new analysts (including lateral transfers and inter-department moves) assigned to the Forensic Science, Cybersecurity, or Data Analytics divisions.",
+      "tfidf_max_similarity": 0.5049,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.002,
+      "nli_contradiction_score": 0.0024,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 12,
+      "question": "How long is the probation period for new hires?",
+      "sentence_idx": 3,
+      "sentence": "Required Training (Weeks 2-4)]  and databases | New Analyst |\n| Day 5 | End-of-week check-in with Hiring Manager | Hiring Manager |\n\n## 5.",
+      "tfidf_max_similarity": 0.6992,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0005,
+      "nli_contradiction_score": 0.0007,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 12,
+      "question": "How long is the probation period for new hires?",
+      "sentence_idx": 4,
+      "sentence": "If performance is unsatisfactory, probation may be extended by up to 3 months (once only) or employment may be terminated.",
+      "tfidf_max_similarity": 0.4444,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0052,
+      "nli_contradiction_score": 0.0003,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 13,
+      "question": "What hashing algorithm should be used for evidence integrity?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Hashing Requirements\n\nEvery forensic image must be verified with dual hashing:  Hashing Requirements\n\nEvery forensic image must be verified with dual hashing:\n\n- **SHA-256** (primary integrity check)\n- **MD5** (secondary, for backward compatibility with legacy systems)\n\nHash values must be generated at the time of acquisition and re-verified before analysis, before transfer, and upon receipt by any new custodian.",
+      "tfidf_max_similarity": 0.7982,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0131,
+      "nli_contradiction_score": 0.0,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 13,
+      "question": "What hashing algorithm should be used for evidence integrity?",
+      "sentence_idx": 2,
+      "sentence": "Hashing Requirements] tile data capture toolkit maintained by the Digital Forensics Lab.",
+      "tfidf_max_similarity": 0.4753,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0144,
+      "nli_contradiction_score": 0.0002,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 15,
+      "question": "What happens after a post-incident review is completed?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Post-Incident Review\n\nA Post-Incident Review (PIR) must be convened within 5 business days of incident closure.",
+      "tfidf_max_similarity": 0.4968,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0052,
+      "nli_contradiction_score": 0.0012,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 16,
+      "question": "How should confidential documents be labeled?",
+      "sentence_idx": 0,
+      "sentence": "Based on the available evidence: Labelling Standards\n\nAll documents must carry a classification label in the header or footer of every page.",
+      "tfidf_max_similarity": 0.3866,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.003,
+      "nli_contradiction_score": 0.0006,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 16,
+      "question": "How should confidential documents be labeled?",
+      "sentence_idx": 1,
+      "sentence": "Emails containing Confidential or Restricted information must include the classification in the subject line prefix, such as `[CONFIDENTIAL]`.",
+      "tfidf_max_similarity": 0.3944,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.1229,
+      "nli_contradiction_score": 0.0015,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 16,
+      "question": "How should confidential documents be labeled?",
+      "sentence_idx": 2,
+      "sentence": "Declassification] ed information must include the classification in the subject line prefix, such as `[CONFIDENTIAL]`.",
+      "tfidf_max_similarity": 0.513,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0093,
+      "nli_contradiction_score": 0.3617,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 16,
+      "question": "How should confidential documents be labeled?",
+      "sentence_idx": 3,
+      "sentence": "[3.3 Confidential] ontrols are required, but release must be approved by the Communications Division.",
+      "tfidf_max_similarity": 0.3715,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0011,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    },
+    {
+      "qa_idx": 17,
+      "question": "What must a change request include before CAB review?",
+      "sentence_idx": 2,
+      "sentence": "Rollback drills for Critical changes must be conducted in the staging environment prior to CAB review.",
+      "tfidf_max_similarity": 0.4902,
+      "tfidf_supported": true,
+      "nli_label": "neutral",
+      "nli_entailment_score": 0.0217,
+      "nli_contradiction_score": 0.0001,
+      "disagreement_type": "tfidf_pass_nli_neutral"
+    }
+  ]
+}

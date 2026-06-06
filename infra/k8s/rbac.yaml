@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: llm-ops-api-sa
+  namespace: llm-ops
+  labels:
+    app: llm-ops-api
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: llm-ops-api-role
+  namespace: llm-ops
+  labels:
+    app: llm-ops-api
+rules:
+  # Read-only access to configmaps and secrets for config loading
+  - apiGroups: [""]
+    resources: ["configmaps", "secrets"]
+    verbs: ["get", "list", "watch"]
+  # Read-only access to pods and services for health checks
+  - apiGroups: [""]
+    resources: ["pods", "services"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: llm-ops-api-rolebinding
+  namespace: llm-ops
+  labels:
+    app: llm-ops-api
+subjects:
+  - kind: ServiceAccount
+    name: llm-ops-api-sa
+    namespace: llm-ops
+roleRef:
+  kind: Role
+  name: llm-ops-api-role
+  apiGroup: rbac.authorization.k8s.io

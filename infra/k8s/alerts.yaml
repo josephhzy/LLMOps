@@ -1,0 +1,71 @@
+# Prometheus AlertManager rules for the LLM Ops service.
+#
+# These rules translate the SLOs documented in docs/SLO.md into pages/warnings.
+# They are proposed, not yet wired into a live Prometheus instance. When a real
+# Prometheus is fronting the service, load these via a PrometheusRule CRD or
+# equivalent static config.
+#
+# Source of truth for the SLO targets themselves: docs/SLO.md
+# Runbook referenced from annotations: docs/RUNBOOK.md
+groups:
+  - name: llm_ops_availability
+    rules:
+      - alert: QueryErrorRateHigh
+        expr: |
+          sum(rate(llm_ops_requests_total{status=~"5..", endpoint="/v1/query"}[5m]))
+            / sum(rate(llm_ops_requests_total{endpoint="/v1/query"}[5m])) > 0.005
+        for: 5m
+        labels:
+          severity: page
+        annotations:
+          summary: "POST /v1/query error rate > 0.5% for 5m"
+          runbook: "docs/RUNBOOK.md#latency-regression"
+
+  - name: llm_ops_latency
+    rules:
+      - alert: QueryP95High
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(llm_ops_request_duration_seconds_bucket{endpoint="/v1/query"}[5m])) by (le)
+          ) > 1.5
+        for: 10m
+        labels:
+          severity: page
+        annotations:
+          summary: "POST /v1/query p95 above 1.5s for 10m"
+          runbook: "docs/RUNBOOK.md#latency-regression"
+
+  - name: llm_ops_quality
+    rules:
+      - alert: AbstainRateHigh
+        expr: |
+          sum(rate(llm_ops_policy_action_total{action="ABSTAIN"}[15m]))
+            / sum(rate(llm_ops_policy_action_total[15m])) > 0.15
+        for: 15m
+        labels:
+          severity: warn
+        annotations:
+          summary: "ABSTAIN rate > 15% for 15m — retrieval or corpus likely degraded"
+          runbook: "docs/RUNBOOK.md#drift-flag"
+
+      - alert: InjectionSpike
+        expr: |
+          sum(rate(llm_ops_policy_action_total{action="BLOCK"}[5m])) > 0.5
+        for: 5m
+        labels:
+          severity: warn
+        annotations:
+          summary: "Injection block rate > 0.5/s for 5m — possible attack"
+          runbook: "docs/RUNBOOK.md#injection-spike"
+
+  - name: llm_ops_governance
+    rules:
+      # TODO: requires an llm_ops_audit_write_failures_total counter (not yet emitted)
+      # - alert: AuditLogWriteFailing
+      #   expr: increase(audit_write_failures_total[5m]) > 0
+      #   for: 0m
+      #   labels:
+      #     severity: page
+      #   annotations:
+      #     summary: "Audit log write failed — governance surface compromised"
+      #     runbook: "docs/RUNBOOK.md#revocation-failure"

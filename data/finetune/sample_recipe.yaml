@@ -1,0 +1,7 @@
+base_model: text-main  # placeholder — replace with a real model ID (e.g. meta-llama/Llama-3.2-1B for HuggingFace/torchtune, or your vLLM-served model) when plugging in a real training backend
+learning_rate: 2.0e-5
+epochs: 3
+batch_size: 8
+max_seq_length: 2048
+lora_rank: 16
+lora_alpha: 32

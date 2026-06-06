@@ -1,0 +1,104 @@
+{
+  "current_version": "v2",
+  "documents": {
+    "guide-001": {
+      "doc_id": "guide-001",
+      "title": "Guide: New Analyst Onboarding Checklist and Procedures",
+      "classification": "internal",
+      "source_file": "guide_001_onboarding.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.511863+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    },
+    "policy-001": {
+      "doc_id": "policy-001",
+      "title": "Policy: Acceptable Use of Information Technology Resources",
+      "classification": "internal",
+      "source_file": "policy_001_acceptable_use.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.515972+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    },
+    "sop-001": {
+      "doc_id": "sop-001",
+      "title": "Standard Operating Procedure: Cybersecurity Incident Response",
+      "classification": "internal",
+      "source_file": "sop_001_incident_response.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.518262+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    },
+    "sop-002": {
+      "doc_id": "sop-002",
+      "title": "Standard Operating Procedure: Digital Evidence Handling and Chain of Custody",
+      "classification": "restricted",
+      "source_file": "sop_002_evidence_handling.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.521274+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    },
+    "sop-003": {
+      "doc_id": "sop-003",
+      "title": "Standard Operating Procedure: Access Control and Identity Management",
+      "classification": "internal",
+      "source_file": "sop_003_access_control.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.524856+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    },
+    "sop-004": {
+      "doc_id": "sop-004",
+      "title": "Standard Operating Procedure: Data Classification and Handling",
+      "classification": "internal",
+      "source_file": "sop_004_data_classification.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.528854+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    },
+    "sop-005": {
+      "doc_id": "sop-005",
+      "title": "Standard Operating Procedure: Change Management",
+      "classification": "internal",
+      "source_file": "sop_005_change_management.md",
+      "status": "active",
+      "registered_at": "2026-04-17T04:56:39.531918+00:00",
+      "revoked_at": null,
+      "revoked_reason": null,
+      "superseded_by": null
+    }
+  },
+  "ingestion_runs": [
+    {
+      "run_id": "run-163939883695",
+      "source_dir": "./data/sample_docs",
+      "corpus_version": "v1",
+      "started_at": "2026-04-16T10:41:51.292148+00:00",
+      "completed_at": "2026-04-16T10:42:27.389757+00:00",
+      "documents_processed": 7,
+      "chunks_created": 81,
+      "errors": []
+    },
+    {
+      "run_id": "run-6be13324b0c4",
+      "source_dir": "./data/sample_docs",
+      "corpus_version": "v2",
+      "started_at": "2026-04-17T04:56:39.507884+00:00",
+      "completed_at": "2026-04-17T04:56:41.445096+00:00",
+      "documents_processed": 7,
+      "chunks_created": 83,
+      "errors": []
+    }
+  ]
+}

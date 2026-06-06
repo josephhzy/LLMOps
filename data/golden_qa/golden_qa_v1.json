@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What are the first steps in incident response?",
+    "expected_answer_contains": ["triage", "classify", "severity"],
+    "expected_sources": ["sop-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "What is the notification timeline for a P1 incident?",
+    "expected_answer_contains": ["15 minutes", "duty officer"],
+    "expected_sources": ["sop-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "How should digital evidence be acquired?",
+    "expected_answer_contains": ["hash", "chain of custody"],
+    "expected_sources": ["sop-002"],
+    "role": "admin"
+  },
+  {
+    "question": "What are the requirements for system access requests?",
+    "expected_answer_contains": ["approval", "least privilege"],
+    "expected_sources": ["sop-003"],
+    "role": "viewer"
+  },
+  {
+    "question": "How often should access rights be reviewed?",
+    "expected_answer_contains": ["quarterly"],
+    "expected_sources": ["sop-003"],
+    "role": "viewer"
+  },
+  {
+    "question": "What are the data classification tiers?",
+    "expected_answer_contains": ["public", "internal", "confidential", "restricted"],
+    "expected_sources": ["sop-004"],
+    "role": "viewer"
+  },
+  {
+    "question": "What handling requirements apply to restricted data?",
+    "expected_answer_contains": ["encrypt", "authorized"],
+    "expected_sources": ["sop-004"],
+    "role": "viewer"
+  },
+  {
+    "question": "What is the change management approval process?",
+    "expected_answer_contains": ["CAB", "review", "rollback"],
+    "expected_sources": ["sop-005"],
+    "role": "viewer"
+  },
+  {
+    "question": "What is the procedure for emergency changes?",
+    "expected_answer_contains": ["emergency", "approval"],
+    "expected_sources": ["sop-005"],
+    "role": "viewer"
+  },
+  {
+    "question": "What activities are prohibited under the acceptable use policy?",
+    "expected_answer_contains": ["prohibited", "unauthorized"],
+    "expected_sources": ["policy-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "What is the limit on personal use of company systems?",
+    "expected_answer_contains": ["personal", "reasonable"],
+    "expected_sources": ["policy-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "What training is required for new analysts during onboarding?",
+    "expected_answer_contains": ["training", "security"],
+    "expected_sources": ["guide-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "How long is the probation period for new hires?",
+    "expected_answer_contains": ["probation", "month"],
+    "expected_sources": ["guide-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "What hashing algorithm should be used for evidence integrity?",
+    "expected_answer_contains": ["SHA-256", "hash"],
+    "expected_sources": ["sop-002"],
+    "role": "admin"
+  },
+  {
+    "question": "Is MFA required for system access?",
+    "expected_answer_contains": ["multi-factor", "MFA"],
+    "expected_sources": ["sop-003"],
+    "role": "viewer"
+  },
+  {
+    "question": "What happens after a post-incident review is completed?",
+    "expected_answer_contains": ["lessons", "improvement"],
+    "expected_sources": ["sop-001"],
+    "role": "viewer"
+  },
+  {
+    "question": "How should confidential documents be labeled?",
+    "expected_answer_contains": ["label", "classification"],
+    "expected_sources": ["sop-004"],
+    "role": "viewer"
+  },
+  {
+    "question": "What must a change request include before CAB review?",
+    "expected_answer_contains": ["rollback", "test", "impact"],
+    "expected_sources": ["sop-005"],
+    "role": "viewer"
+  }
+]
