@@ -63,7 +63,9 @@ class EvaluationService:
             'grounded_support': round(avg_support, 4),
             'citation_coverage': round(avg_citation, 4),
             'keyword_coverage': round(avg_keyword, 4),
-            'unsupported_rate': round(1.0 - avg_support, 4),  # fraction of sentences with low TF-IDF overlap vs. retrieved evidence; not a factual entailment check
+            'unsupported_rate': round(
+                1.0 - avg_support, 4
+            ),  # fraction of sentences with low TF-IDF overlap vs. retrieved evidence; not a factual entailment check
             'avg_latency_ms': round(avg_latency, 2),
         }
 

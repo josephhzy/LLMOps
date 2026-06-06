@@ -34,12 +34,12 @@ class TestChunkDocument:
     def test_chunks_have_overlap(self):
         text = 'Paragraph one content here. ' * 20 + '\n\n' + 'Paragraph two content here. ' * 20
         chunks = chunk_document(text, chunk_size=200, overlap=50)
-        assert len(chunks) >= 2, "Expected multiple chunks for long input"
+        assert len(chunks) >= 2, 'Expected multiple chunks for long input'
         # The last `overlap` characters of the raw first chunk should appear in chunk[1].
         # Since no section_header is passed and the input has no '#' headers, chunks have no prefix.
         overlap = 50
         assert chunks[0][-overlap:] in chunks[1], (
-            f"Expected overlap tail {chunks[0][-overlap:]!r} to appear in chunk[1]"
+            f'Expected overlap tail {chunks[0][-overlap:]!r} to appear in chunk[1]'
         )
 
     def test_empty_text_returns_empty(self):

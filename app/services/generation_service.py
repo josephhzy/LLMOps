@@ -155,7 +155,7 @@ class GenerationService:
             return 'I do not have enough grounded evidence to answer this question.'
 
         # Take top sentences (up to 5), maintaining diversity across sources
-        selected = []
+        selected: list[tuple[str, int, float]] = []
         seen_sources: set[int] = set()
         for sent, block_idx, score in scored_sentences:
             if score < 0.05:

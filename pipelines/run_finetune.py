@@ -182,7 +182,9 @@ def load_recipe(recipe_path: str) -> FinetuneRecipe:
         raise ValueError(f'Epochs {epochs} outside valid range [1, 100]')
 
     return FinetuneRecipe(
-        base_model=raw.get('base_model', 'text-main'),  # 'text-main' is a demo placeholder — replace with a real model ID for a live backend
+        base_model=raw.get(
+            'base_model', 'text-main'
+        ),  # 'text-main' is a demo placeholder — replace with a real model ID for a live backend
         learning_rate=lr,
         epochs=epochs,
         batch_size=raw.get('batch_size', 8),

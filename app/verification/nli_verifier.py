@@ -23,7 +23,7 @@ Implements the `Verifier` port so the swap is one line in
 from __future__ import annotations
 
 import re
-from typing import Literal
+from typing import Any, Literal
 
 from app.core.logging import get_logger
 
@@ -69,7 +69,7 @@ class NLIVerifier:
         # downloaded or loaded (e.g. air-gapped CI, corrupt HF cache).
         # Set to None to disable the fallback and fail fast.
         self.fallback_model_name = fallback_model_name
-        self._model = None
+        self._model: Any = None
         self._load_error: str | None = None
         self._id2label: dict[int, str] = dict(_EXPECTED_ID2LABEL)
 
@@ -263,7 +263,7 @@ class NLIVerifier:
                 'neutral': best_neu,
                 'contradiction': best_con,
             }
-            label = max(label_probs, key=label_probs.get)
+            label = max(label_probs, key=lambda k: label_probs[k])
 
             # Treat as supported only if entailment clears the threshold.
             supported = best_ent >= self.entailment_threshold and label == 'entailment'

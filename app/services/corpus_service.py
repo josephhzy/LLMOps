@@ -10,6 +10,7 @@ import json
 import uuid
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any
 
 from app.core.audit import audit
 from app.core.logging import get_logger
@@ -145,7 +146,7 @@ class CorpusService:
         run_id = f'run-{uuid.uuid4().hex[:12]}'
         corpus_version = f'v{len(self._state["ingestion_runs"]) + 1}'
 
-        run = {
+        run: dict[str, Any] = {
             'run_id': run_id,
             'source_dir': source_dir,
             'corpus_version': corpus_version,

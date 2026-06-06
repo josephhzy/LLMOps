@@ -3,6 +3,8 @@
 Demonstrates graceful degradation under adverse conditions.
 """
 
+from typing import ClassVar
+
 import pytest
 
 from app.models.enums import PolicyAction
@@ -84,7 +86,7 @@ class TestAuthEnforcement:
 class TestAdminGuard:
     """Mutating governance routes under /v1/admin require the admin role, not just auth."""
 
-    _REGISTER = {
+    _REGISTER: ClassVar[dict[str, str]] = {
         'model_id': 'guard-test',
         'backend': 'template',
         'prompt_version': 'v1',

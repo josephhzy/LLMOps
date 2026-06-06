@@ -36,7 +36,9 @@ class Settings(BaseSettings):
     cross_encoder_model: str = 'cross-encoder/ms-marco-MiniLM-L-6-v2'
 
     # Verification
-    verification_backend: str = 'tfidf'  # placeholder — not yet read by any service; VerificationService unconditionally uses TF-IDF
+    verification_backend: str = (
+        'tfidf'  # placeholder — not yet read by any service; VerificationService unconditionally uses TF-IDF
+    )
     grounding_threshold: float = 0.3
 
     # NLI shadow-mode — runs NLI verifier alongside TF-IDF and logs both

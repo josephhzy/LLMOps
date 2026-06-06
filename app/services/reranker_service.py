@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import threading
 from dataclasses import replace
+from typing import Any
 
 from app.core.config import settings
 from app.core.logging import get_logger
@@ -16,7 +17,7 @@ from app.models.domain import RetrievedChunk
 
 logger = get_logger(__name__)
 
-_cross_encoder_cache: dict[str, object] = {}
+_cross_encoder_cache: dict[str, Any] = {}
 _cross_encoder_lock = threading.Lock()
 
 
